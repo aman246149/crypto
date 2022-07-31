@@ -30,8 +30,8 @@ class Favourite extends StatelessWidget {
 
           if (state is FavouriteSuccessState) {
             print("favourite success state");
-            return state.list.length == 0
-                ? Center(child: Text("add favourite first"))
+            return state.list.isEmpty
+                ? const Center(child: Text("add favourite first"))
                 : CryptoMarket(null, state, true);
           }
           return Center(
