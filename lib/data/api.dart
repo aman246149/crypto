@@ -9,14 +9,13 @@ import 'package:http/http.dart' as http;
 
 class Api {
   Future<Either<CustomError, List<CryptoModel>>> fetchAlbum() async {
+
+    try {
+   
     final response = await http.get(
         Uri.parse(
             'https://api.coingecko.com/api/v3/coins/markets?vs_currency=inr&order=market_cap_desc&per_page=50&page=1&sparkline=false'),
      );
-
-    try {
-      // If the server did return a 200 OK response,
-      // then parse the JSON.
       List<CryptoModel> data = [];
       var decodedJson = jsonDecode(response.body);
       for (int i = 0; i < decodedJson.length; i++) {

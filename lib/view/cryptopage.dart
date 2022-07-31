@@ -1,7 +1,7 @@
 import 'package:apitesting/model/crypto.dart';
 import 'package:apitesting/view/Blocs/cryptoFetchBloc/crypto_bloc.dart';
 import 'package:apitesting/view/widgets/cryptomarket.dart';
-import 'package:apitesting/view/widgets/favourite.dart';
+import 'package:apitesting/view/favourite_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
